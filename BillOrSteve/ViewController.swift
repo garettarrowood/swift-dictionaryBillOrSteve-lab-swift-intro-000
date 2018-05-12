@@ -12,12 +12,14 @@ class ViewController: UIViewController {
     
     // Create your stored properties here
     
+    jobs1 = "He took a calligraphy course, which he says was instrumental in the future company products' attention to typography and font."
+    
+    gates1 = "
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
     
     
     
