@@ -4,9 +4,12 @@
 
 ## Solution
 
+
+
+
 Please make an attempt at this lab before viewing the solution. It's a challenge!
 
-You can type `git checkout solution` in terminal to be able to view the solution in your Xcode Project (note that you would then need to go back to the master branch by typing `git checkout master` if you did this). 
+You can type `git checkout solution` in terminal to be able to view the solution in your Xcode Project (note that you would then need to go back to the master branch by typing `git checkout master` if you did this).
 
 You can also click this link [here](https://github.com/learn-co-curriculum/swift-dictionaryBillOrSteve-lab/blob/solution/BillOrSteve/ViewController.swift) to the view the solution in a browser. The solution branch and this link both include the extra credit.
 
@@ -47,28 +50,28 @@ The crux of this application will be contained in `ViewController` (in the `View
 
 ```swift
 class ViewController: UIViewController {
-    
+
     // Create your stored property here
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     // Helper Functions
     func randomIndex(fromArray array: [String]) -> Int {
         return Int(arc4random_uniform(UInt32(array.count)))
     }
-    
+
     func randomPerson() -> String {
         let randomNumber = arc4random_uniform(2)
-        
+
         if randomNumber == 0 {
             return "Steve Jobs"
         } else {
             return "Bill Gates"
         }
     }
-    
+
 }
 ```
 
@@ -92,15 +95,15 @@ First, what is a stored property? Notice how we're writing our various methods w
 class ViewController: UIViewController {
 ```
 
-The closing brace `}` is on line 39. Everything in between these curly braces (beginning on line 11 and ending on line 39) represents the functionality and variables associated with this `ViewController` class. Think of the `ViewController` class as a person and everything that falls in between the curly braces (beginning on line 11 and ending on line 39) relates to _things_ this person can do or _attributes_ associated with this person. As in.. a person might be able to eat, sleep (functions) but they also have a name, hair color, favorite artist (attributes or properties). The name, hair color and favorite artist of a person in code are considered stored properties. This is a very brief overview of what stored properties are and how they relate to classes. This will be covered in much more detail in the coming lessons. 
+The closing brace `}` is on line 39. Everything in between these curly braces (beginning on line 11 and ending on line 39) represents the functionality and variables associated with this `ViewController` class. Think of the `ViewController` class as a person and everything that falls in between the curly braces (beginning on line 11 and ending on line 39) relates to _things_ this person can do or _attributes_ associated with this person. As in.. a person might be able to eat, sleep (functions) but they also have a name, hair color, favorite artist (attributes or properties). The name, hair color and favorite artist of a person in code are considered stored properties. This is a very brief overview of what stored properties are and how they relate to classes. This will be covered in much more detail in the coming lessons.
 
 ```swift
 class Person {
-    
+
     func eat() {
         print("Eat all the things.")
     }
-    
+
     func dance() {
         print("Put on some Michael Jackson and dance")
     }
@@ -112,14 +115,14 @@ If I asked you to add a stored property to this Person class, in particular a st
 
 ```swift
 class Person {
-    
+
     var name: String
-    
+
     func eat() {
         print("Eat all the things.")
         print("My name is \(name)")
     }
-    
+
     func dance() {
         print("Put on some Michael Jackson and dance")
         print("My name is \(name)")
@@ -129,7 +132,7 @@ class Person {
 }
 ```
 
-`name` here is a stored property. It can be either a variable or constant and it is accessible within all of the functions associated with this class. We can refer to name in the `eat()` function, and the `dance()` function (just like real life). 
+`name` here is a stored property. It can be either a variable or constant and it is accessible within all of the functions associated with this class. We can refer to name in the `eat()` function, and the `dance()` function (just like real life).
 
 **Back to the lesson now**:
 
@@ -144,16 +147,16 @@ Here's a hint as to what this prior paragraph is asking you to do:
 ```swift
     // Create your stored property here
     var billAndSteveFacts: [String : [String]] = [:]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         createFacts()
     }
-    
+
     func createFacts() {
         let billFacts = ["Cheese", "More Cheese"]
         let steveFacts = ["No Cheese", "Milk"]
-        
+
         billAndSteveFacts["Bill Gates"] = billFacts
         billAndSteveFacts["Steve Jobs"] = steveFacts
     }
@@ -181,9 +184,9 @@ Finally, you should create a method called `getRandomFact()`. This method should
 
 ```swift
     func getRandomFact() -> (String, String) {
-        
+
         // implement your function here
-        
+
     }
 ```
 
